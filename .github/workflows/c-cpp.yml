@@ -14,4 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: configure
-      run: ./configure
+      run: chmod +x ./build_code.sh
+    - name: compile
+      run: ./build_code.sh
