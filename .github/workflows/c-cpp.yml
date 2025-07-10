@@ -13,7 +13,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: configure
-      run: chmod +x ./build_code.sh
+    #- name: configure
+      #run: chmod +x ./build_code.sh
+    #- name: compile
+      #run: ./build_code.sh
+    - name: delete-old-file
+      run: rm -rf *
+    - name: copy-new-file
+      run: cp -rf /home/master/honda/cicd/LT/* ./
     - name: compile
-      run: ./build_code.sh
+      run: python3 script/operation.py -m unit_test -t ubuntu
