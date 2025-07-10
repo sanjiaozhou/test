@@ -21,7 +21,5 @@ jobs:
       run: rm -rf *
     - name: copy-new-file
       run: cp -rf /home/master/honda ./
-    - name: enter-dir
-      run: cd honda/cicd/LT
     - name: compile
-      run: python3 script/operation.py -m unit_test -t ubuntu -sudo hgtpass
+      run: python3 honda/cicd/LT/script/operation.py -m unit_test -t ubuntu -sudo hgtpass
