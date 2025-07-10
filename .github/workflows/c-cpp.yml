@@ -21,8 +21,8 @@ jobs:
       run: rm -rf *
     - name: copy-new-file
       run: cp -rf /home/master/honda/cicd/LT/* ./
-    - name: enter-dir
-      run: cd /home/master/github_test/actions-runner/_work/test/test/honda/cicd/LT
+    #- name: enter-dir
+      #run: cd /home/master/github_test/actions-runner/_work/test/test/honda/cicd/LT
     - name: print-dir-path
       run: echo "current dir path = $(pwd)"
     - name: compile
