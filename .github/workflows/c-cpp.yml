@@ -27,3 +27,9 @@ jobs:
       run: echo "current dir path = $(pwd)"
     - name: compile
       run: python3 script/operation.py -m unit_test -t ubuntu -sudo hgtpass
+    - name: unit-test-done
+      run: echo "unit test task finish !"
+    - name: static-analyze-begin
+      run: echo "static analyze begin !"
+    - name: static-analyze
+      run: python3 script/operation.py -m static_analyze -t ubuntu -sudo hgtpass
