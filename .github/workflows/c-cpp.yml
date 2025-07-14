@@ -25,8 +25,8 @@ jobs:
       #run: cd /home/master/github_test/actions-runner/_work/test/test/honda/cicd/LT
     - name: print-dir-path
       run: echo "current dir path = $(pwd)"
-    #- name: compile
-      #run: python3 script/operation.py -m unit_test -t ubuntu -sudo hgtpass
+    - name: unit-test
+      run: python3 script/operation.py -m unit_test -t ubuntu -sudo hgtpass
     - name: unit-test-done
       run: echo "unit test task finish !"
     - name: static-analyze-begin
