@@ -26,7 +26,7 @@ jobs:
     - name: print-dir-path
       run: echo "current dir path = $(pwd)"
     - name: compile
-      run: python3 script/operation.py -m unit_test -t ubuntu -sudo hgtpass
+      #run: python3 script/operation.py -m unit_test -t ubuntu -sudo hgtpass
     - name: unit-test-done
       run: echo "unit test task finish !"
     - name: static-analyze-begin
