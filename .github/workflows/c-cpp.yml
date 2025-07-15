@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - name: delete-old-file
-      run: echo hgtpass|sudo -S rm -rf *
+      run: rm -rf *
     - uses: actions/checkout@v4
     #- name: configure
       #run: chmod +x ./build_code.sh
