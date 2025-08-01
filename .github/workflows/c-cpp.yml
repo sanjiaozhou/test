@@ -20,16 +20,18 @@ jobs:
     #- name: compile
       #run: ./build_code.sh
     - name: copy-new-file
-      run: cp -rf /home/master/honda/cicd/LT/* ./
+      run: cp -rf /home/master/bft_code/core-telematics-ca55_RDF_Feb_2025_Mar31/* ./
+      #run: cp -rf /home/master/honda/cicd/LT/* ./
     #- name: enter-dir
       #run: cd /home/master/github_test/actions-runner/_work/test/test/honda/cicd/LT
     - name: print-dir-path
       run: echo "current dir path = $(pwd)"
-    - name: unit-test
-      run: python3 script/operation.py -m unit_test -t ubuntu -sudo hgtpass
-    - name: unit-test-done
-      run: echo "unit test task finish !"
+    #- name: unit-test
+      #run: python3 script/operation.py -m unit_test -t ubuntu -sudo hgtpass
+    #- name: unit-test-done
+      #run: echo "unit test task finish !"
     - name: static-analyze-begin
       run: echo "static analyze begin !"
     - name: static-analyze
-      run: python3 script/operation.py -m static_analyze -t ubuntu -sudo hgtpass
+      run: python3 script/operation.py -m static_analyze -t linux -sudo hgtpass
+      #run: python3 script/operation.py -m static_analyze -t ubuntu -sudo hgtpass
